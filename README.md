@@ -1,7 +1,7 @@
 
 ## Fitness Tracker ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-![Image](https://dl.dropboxusercontent.com/u/41297054/Pic.jpeg)
+![Image](https://github.com/chemacenturion/Fitness_Tracker/blob/main/public/images/Screenshot%20(171).png?raw=true)
 
 
 ## Description
