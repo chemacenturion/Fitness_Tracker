@@ -5,12 +5,16 @@
 This a fitness tracking app that allows a client to track their workout data up to seven days which will assist in their weight loss routine leading to faster results.
 
 ## Table of Contents:
+* [Deployment](#Deployment)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [License](#License)
 * [Contributing](#Contributing)
 * [Tests](#Tests)
 * [Questions](#Questions)
+
+## Deployment
+[Click here for deployed version](https://dry-harbor-98999.herokuapp.com/?id=6161928193b6180016a78bcb)
 
 ## Installation
 * To install neccesary dependencies please run the following command:
