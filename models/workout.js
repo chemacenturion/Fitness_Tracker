@@ -1,6 +1,6 @@
-const { Schema, model } = require('mongoose');
-const exerciseSchema = require('./Exercise');
+const mongoose = require('mongoose');
 
+const Schema = mongoose.Schema;
 
 const WorkoutSchema = new Schema(
     {
@@ -9,10 +9,36 @@ const WorkoutSchema = new Schema(
             default: Date.now
         },
         
-        exercises: [exerciseSchema]
+        exercises: [
+            {   name: {
+                    type: String,
+                },
+                type:  {
+                    type: String,
+                },
+                weight: {
+                    type: Number,
+                },
+                reps: {
+                    type: Number,
+                },
+                sets: {
+                    type: Number,
+                },
+                duration: {
+                    type: Number,
+                },
+                distance_traveled: {
+                    type: Number,
+                },
+            },
+        ]
     });
 
 
-const Workout = model('Workout', WorkoutSchema)
+const Workout = mongoose.model('Workout', WorkoutSchema)
 
 module.exports = Workout;
+
+
+// should this follow the mongoose.model format and the mongoose.schema format?
