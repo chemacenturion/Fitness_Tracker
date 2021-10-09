@@ -1,16 +1,16 @@
-const Workout = require("../models")
+const db = require("../models")
 
-module.exports = {
-    addWorkout(req, res) {
-        Workout.create({})
+const workoutFunctions = {
+    addWorkout: function (req, res) {
+        db.Workout.create({})
         .then((workout) => res.json(workout))
         .catch((err) => {
             console.log(err);
             return res.status(500).json(err);
           });
     },
-    addExercise(req, res) {
-        Workout.findByIdAndUpdate(req.params.id,
+    addExercise: function (req, res) {
+        db.Workout.findByIdAndUpdate(req.params.id,
             {$push: {exercises: req.body}}
             )
         .then(workout => res.json(workout))
@@ -19,12 +19,20 @@ module.exports = {
             return res.status(500).json(err);
           });
     },
-    getWorkouts(req,res) {
-        Workout.find({})
+    getWorkouts: function (req,res) {
+          db.Workout.aggregate([
+            {
+              $addFields: {
+              totalDuration: {
+                $sum: "$exercises.duration"
+              }
+            }
+          },
+        ])
         .then((workout) => res.json(workout))
     },
-    getWorkoutsInRange(req, res) {
-        Workout.aggregate([
+    getWorkoutsInRange: function (req, res) {
+        db.Workout.aggregate([
           {
             $addFields: {
             totalDuration: {
@@ -32,17 +40,6 @@ module.exports = {
             }
           }
         },
-    
-          {
-            $addFields: {
-              totalWeight: {
-                $sum: "$exercises.weight"
-              }
-            }
-          }
-    
-         
-      
       ])  
       .sort( { day: -1 } )
       .limit( 7 )
@@ -50,3 +47,5 @@ module.exports = {
       .catch((err) => res.status(500).json(err))
   }
 }
+
+module.exports = workoutFunctions;

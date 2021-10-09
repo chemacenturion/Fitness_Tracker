@@ -1,16 +1,11 @@
 const router = require('express').Router();
-const {
-  getLastWorkout,
-  addExercise,
-  createWorkout,
-  getWorkoutsInRange,
-} = require('../../controllers/workoutController');
+const workoutController = require('../../controllers/workoutController');
 
 
-router.route('/').get(getLastWorkout);
-router.route('/').post(createWorkout);
-router.route('/:id').put(addExercise);
-router.route('/range').get(getWorkoutsInRange);
+router.route('/').get(workoutController.getWorkouts);
+router.route('/').post(workoutController.addWorkout);
+router.route('/:id').put(workoutController.addExercise);
+router.route('/range').get(workoutController.getWorkoutsInRange);
 
 
 module.exports = router;
