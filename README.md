@@ -1,7 +1,7 @@
 
 ## Fitness Tracker ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-![Fitness_Tracker GIF](https://github.com/chemacenturion/Fitness_Tracker/blob/main/public/images/Fitness_Tracker.gif?raw=true)
+![Image](https://dl.dropboxusercontent.com/u/41297054/Pic.jpeg)
 
 
 ## Description
@@ -18,7 +18,8 @@ This a fitness tracking app that allows a client to track their workout data up 
 
 ## Deployment
 [Click here for deployed version](https://dry-harbor-98999.herokuapp.com/?id=6161928193b6180016a78bcb)
-![Image](https://dl.dropboxusercontent.com/u/41297054/Pic.jpeg)
+
+![Fitness_Tracker GIF](https://github.com/chemacenturion/Fitness_Tracker/blob/main/public/images/Fitness_Tracker.gif?raw=true)
 
 ## Installation
 * To install neccesary dependencies please run the following command:
