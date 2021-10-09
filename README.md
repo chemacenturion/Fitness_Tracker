@@ -1,6 +1,9 @@
 
 ## Fitness Tracker ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+![Image](https://dl.dropboxusercontent.com/u/41297054/Pic.jpeg)
+
+
 ## Description
 This a fitness tracking app that allows a client to track their workout data up to seven days which will assist in their weight loss routine leading to faster results.
 
@@ -15,6 +18,7 @@ This a fitness tracking app that allows a client to track their workout data up 
 
 ## Deployment
 [Click here for deployed version](https://dry-harbor-98999.herokuapp.com/?id=6161928193b6180016a78bcb)
+![Image](https://dl.dropboxusercontent.com/u/41297054/Pic.jpeg)
 
 ## Installation
 * To install neccesary dependencies please run the following command:
